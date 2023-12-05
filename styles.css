@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,400;1,700&display=swap');
+
+:root {
+        /* custom features */
+    --box-shadow_small: .5px .5px 1.2px 2.5px rgba(51, 51, 51, 0.3);
+        /* color palette */
+    --white:#fff0f0;
+    --black:#372f2f;
+    --mute-text: #69c;
+    --background:#f8e6e6;
+}
+*,*::before,*::after {
+    box-sizing: border-box;
+    margin: 0; padding: 0; 
+    outline: none; border: none;
+    text-decoration: none; text-transform: none;
+    list-style: none; transition: .2s linear;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+}
+
+/** Header **/
+.head {
+    background-color: var(--background);
+    height: 85vh;
+}
+.site-title {
+}
+
+/* navagation */
+nav {
+    background-color: transparent;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+.nav-list {
+    width: 100%;
+    display: flex;
+    align-items: center; justify-content: flex-end;
+}
+.nav-list li {
+    height: 5rem;
+}
+.nav-list .site-title a {
+    font-size: 2.75rem; font-weight: 800; font-style: italic;
+    color: green;
+    /* text-shadow: 2px 2px 2px 5px; make work */
+}
+.nav-list a {
+    font-size: 1.5rem; font-weight: 500;
+    height: 100%;
+    padding: 0 3rem;
+    display: flex;
+    align-items: center;
+    color: #ff0;
+}
+.nav-list a:hover {
+    color: red;
+}
+.sidebar a {
+    color: aqua;
+}
+.sidebar a:hover {
+    color: beige;
+}
+
+.nav-list li:first-child {
+    margin-right: auto;
+}
+.sidebar {
+    position: fixed;
+    top: 0; right: 0;
+    height: 100vh; width: 25rem;
+    z-index: 999;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start; justify-content: center;
+    background-color: var(--background);
+    box-shadow: -1rem 0 1rem rgba(0, 0, 0, 0.2);
+}
+.sidebar li, .sidebar a{
+    width: 100%;
+}
+/* 320px-400px */
+@media (max-width: 400px) {
+    .sidebar {
+        width: 100%;
+    }
+}
+/* 400px-800px */
+@media (max-width: 800px) {
+    .hide {
+        display: none;
+    }
+}
+/* 800px+ */
+@media (min-width: 800px) {
+    .hideicon {
+        display: none;
+    }
+}
